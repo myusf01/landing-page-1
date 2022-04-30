@@ -63,6 +63,7 @@
 .Page-heading-second {
   color: #eeeeee;
   margin-right: auto;
+  margin-bottom: auto;
   max-width: 500px;
   font-size: 4rem;
   font-weight: bold;
@@ -76,11 +77,12 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  margin-bottom: auto;
 }
 .content .showcase {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .content .showcase-image {
   margin-right: 5rem;
@@ -89,6 +91,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 2rem;
 }
 .content .showcase .details .detail {
   margin-right: 2rem;
@@ -99,24 +102,39 @@
 .content .showcase .details .detail .title {
   display: block;
   font-weight: bold;
+  margin-bottom: 1rem;
+}
+.content .showcase .details .detail .description {
+  display: block;
+  margin-bottom: 1rem;
+}
+.content .showcase .downloads {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .content .showcase .app-info {
   display: flex;
   align-items: center;
+  margin-bottom: 2rem;
 }
 .content .showcase .app-icon {
   margin-right: 2rem;
 }
 .content .showcase .app-title {
   display: flex;
-  font-size: 2rem;
+  font-size: 3rem;
   flex-direction: column;
 }
 .content .showcase .app-title .bold {
   font-weight: bold;
 }
+.content .showcase .app-desc {
+  font-size: 1.4rem;
+}
 .content .showcase .app-store {
   height: 3rem;
+  margin-right: 1rem;
 }
 
 .icon {
@@ -135,13 +153,20 @@
   bottom: 5rem;
   top: 7rem;
 }
-
 .Page-floating-2 {
   position: fixed;
   pointer-events: none;
   left: 5rem;
   bottom: 25rem;
   top: 1rem;
+}
+.Page-floating .is-visible {
+  -webkit-animation: fade-in 1s ease forwards;
+          animation: fade-in 1s ease forwards;
+}
+.Page-floating .is-hidden {
+  -webkit-animation: fade-out 1s ease forwards;
+          animation: fade-out 1s ease forwards;
 }
 
 .frame {
@@ -151,14 +176,4 @@
   width: 320px;
   margin-right: auto;
   margin-left: auto;
-}
-
-.is-visible {
-  -webkit-animation: fade-in 1s ease forwards;
-          animation: fade-in 1s ease forwards;
-}
-
-.is-hidden {
-  -webkit-animation: fade-out 1s ease forwards;
-          animation: fade-out 1s ease forwards;
 }

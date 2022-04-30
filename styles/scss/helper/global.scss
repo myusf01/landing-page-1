@@ -1,4 +1,5 @@
 @import "../config/variables.scss";
+@import "../config/mixin.scss";
 body {
     font-family: $font-family;
     color: $color-white;
@@ -6,9 +7,45 @@ body {
     background-color: $color-background;
 }
 
+.bg-layer {
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+    background: url("../../../assets/background-shape.svg") no-repeat fixed;
+}
 .container {
     max-width: $max-width;
     max-height: $max-height;
     margin-left: auto;
     margin-right: auto;
+}
+.button {
+    @include flex-center;
+    height: $button-height;
+    width: $button-width;
+    font-weight: bold;
+    border: 1px solid white;
+    border-radius: 0.5rem;
+}
+.text-purple {
+    @include text-color($text-purple);
+}
+.text-lavender {
+    @include text-color($text-lavender);
+}
+.text-pink {
+    @include text-color($text-pink);
+}
+.text-orange {
+    @include text-color($text-orange);
+}
+.text-orangeish {
+    @include text-color($text-orangeish);
+}
+.text-grey {
+    @include text-color($text-grey);
 }

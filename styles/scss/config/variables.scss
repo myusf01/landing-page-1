@@ -5,31 +5,22 @@ $scale-size: 2;
 $default-scale: 1;
 $font-family: "Quicksand", Arial, sans-serif;
 $font-size: 2rem;
+$font-size-s: $font-size * 0.7;
 $font-size-m: $font-size * 1.5;
 $font-size-l: $font-size * 2;
-$color-white: #eeeeee;
-$color-purple: #ea1dff;
-$color-background: #121212;
-
 $button-height: 3rem;
-// functions
-@mixin content-object($position: fixed, $rotate: 0, $right: 0, $left: 0, $bottom: 0, $top: 0) {
-    position: $position;
-    pointer-events: none;
+$button-width: 6rem;
 
-    @if $rotate != 0 {
-        rotate: $rotate;
-    }
-    @if $left != 0 {
-        left: $left;
-    }
-    @if $right != 0 {
-        right: $right;
-    }
-    @if $bottom != 0 {
-        bottom: $bottom;
-    }
-    @if $top != 0 {
-        top: $top;
-    }
-}
+// colors
+
+$color-white: #eeeeee;
+$color-background: #121212;
+$color-purple: #ea1dff;
+
+// text colors
+$text-purple: #ac3ac9;
+$text-lavender: #944ef0;
+$text-pink: #d13e8c;
+$text-orange: #f8604d;
+$text-orangeish: #f8764d;
+$text-grey: #7d7d7d;

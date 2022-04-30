@@ -1,13 +1,14 @@
 @import "../config/animations.scss";
 @import "../config/variables.scss";
+@import "../config/mixin.scss";
 .Page {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100vh;
+
     &-second {
         display: flex;
-
         justify-content: space-around;
         height: 100vh;
         flex-direction: column;
@@ -25,7 +26,7 @@
         &-second {
             color: $color-white;
             margin-right: auto;
-
+            margin-bottom: auto;
             max-width: 500px;
             font-size: $font-size-l;
             font-weight: bold;
@@ -42,10 +43,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin-bottom: auto;
+
     .showcase {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: space-between;
         &-image {
             margin-right: 5rem;
         }
@@ -53,6 +56,8 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            margin-bottom: 2rem;
+
             .detail {
                 margin-right: 2rem;
                 display: flex;
@@ -61,27 +66,42 @@
                 .title {
                     display: block;
                     font-weight: bold;
+                    margin-bottom: 1rem;
+                }
+                .description {
+                    display: block;
+                    margin-bottom: 1rem;
                 }
             }
+        }
+        .downloads {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
         }
         .app {
             &-info {
                 display: flex;
                 align-items: center;
+                margin-bottom: 2rem;
             }
             &-icon {
                 margin-right: 2rem;
             }
             &-title {
                 display: flex;
-                font-size: $font-size;
+                font-size: $font-size-m;
                 flex-direction: column;
                 .bold {
                     font-weight: bold;
                 }
             }
+            &-desc {
+                font-size: $font-size-s;
+            }
             &-store {
                 height: $button-height;
+                margin-right: 1rem;
             }
         }
     }
@@ -93,11 +113,20 @@
 .objects-wrapper {
     position: absolute;
 }
-.Page-floating-1 {
-    @include content-object(fixed, 20deg, 5rem, 0, 5rem, 7rem);
-}
-.Page-floating-2 {
-    @include content-object(fixed, 0, 0, 5rem, 25rem, 1rem);
+
+.Page-floating {
+    &-1 {
+        @include content-object(fixed, 20deg, 5rem, 0, 5rem, 7rem);
+    }
+    &-2 {
+        @include content-object(fixed, 0, 0, 5rem, 25rem, 1rem);
+    }
+    .is-visible {
+        animation: fade-in 1s ease forwards;
+    }
+    .is-hidden {
+        animation: fade-out 1s ease forwards;
+    }
 }
 
 .frame {
@@ -107,11 +136,4 @@
     width: 320px;
     margin-right: auto;
     margin-left: auto;
-}
-
-.is-visible {
-    animation: fade-in 1s ease forwards;
-}
-.is-hidden {
-    animation: fade-out 1s ease forwards;
 }

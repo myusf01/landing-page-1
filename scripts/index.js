@@ -26,7 +26,11 @@
 
 function reveal() {
   //   const frames = [...document.querySelectorAll("iframe")];
-  const frames = [...document.querySelector(".objects-wrapper").children];
+  const background = document.querySelector(".bg-layer");
+  const frames = [
+    ...document.querySelector(".objects-wrapper").children,
+    background,
+  ];
   //   console.log(wrapper);
   for (let i = 0; i < frames.length; i++) {
     let scrollValue = window.scrollY;

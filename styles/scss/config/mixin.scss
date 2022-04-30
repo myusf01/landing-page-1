@@ -1,0 +1,31 @@
+@mixin content-object($position: fixed, $rotate: 0, $right: 0, $left: 0, $bottom: 0, $top: 0) {
+    position: $position;
+    pointer-events: none;
+
+    @if $rotate != 0 {
+        rotate: $rotate;
+    }
+    @if $left != 0 {
+        left: $left;
+    }
+    @if $right != 0 {
+        right: $right;
+    }
+    @if $bottom != 0 {
+        bottom: $bottom;
+    }
+    @if $top != 0 {
+        top: $top;
+    }
+}
+
+@mixin flex-center($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin text-color($color) {
+    color: $color;
+}
