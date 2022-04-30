@@ -5,10 +5,10 @@ const autoprefixer = require("gulp-autoprefixer");
 
 function style() {
   return gulp
-    .src("./scss/**/index.scss")
+    .src("./styles/scss/**/index.scss")
     .pipe(sass())
     .pipe(autoprefixer())
-    .pipe(gulp.dest("./styles"))
+    .pipe(gulp.dest("./styles/css"))
     .pipe(browserSync.stream());
 }
 
@@ -18,7 +18,7 @@ function watch() {
       baseDir: "./",
     },
   });
-  gulp.watch("./scss/**/*.scss", style);
+  gulp.watch("./styles/scss/**/*.scss", style);
   gulp.watch("./*.html").on("change", browserSync.reload);
   gulp.watch("./scripts/**/*.js").on("change", browserSync.reload);
 }

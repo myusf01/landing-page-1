@@ -434,7 +434,7 @@ template {
 
 body {
   font-family: "Quicksand", Arial, sans-serif;
-  background: url("../assets/background.jpg") no-repeat center center fixed;
+  background: url("../../../assets/background.jpg") no-repeat center center fixed;
 }
 
 .container {
