@@ -48,3 +48,8 @@ body {
 .text-grey {
     @include text-color($text-grey);
 }
+.text-gradient {
+    background: $color-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

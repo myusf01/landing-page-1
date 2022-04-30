@@ -1,13 +1,15 @@
-// variables
-$max-width: 1200px;
-$max-height: 900px;
-$scale-size: 2;
-$default-scale: 1;
+// font
 $font-family: "Quicksand", Arial, sans-serif;
 $font-size: 2rem;
 $font-size-s: $font-size * 0.7;
 $font-size-m: $font-size * 1.5;
 $font-size-l: $font-size * 2;
+
+// variables
+$max-width: 1200px;
+$max-height: 900px;
+$scale-size: 2;
+$default-scale: 1;
 $button-height: 3rem;
 $button-width: 6rem;
 
@@ -24,3 +26,10 @@ $text-pink: #d13e8c;
 $text-orange: #f8604d;
 $text-orangeish: #f8764d;
 $text-grey: #7d7d7d;
+$color-gradient: radial-gradient(
+    circle,
+    rgba(248, 104, 120, 1) 0%,
+    rgba(238, 99, 132, 1) 47%,
+    rgba(223, 90, 149, 1) 74%,
+    rgba(180, 67, 196, 1) 100%
+);

@@ -531,6 +531,12 @@ body {
   color: #7d7d7d;
 }
 
+.text-gradient {
+  background: radial-gradient(circle, rgb(248, 104, 120) 0%, rgb(238, 99, 132) 47%, rgb(223, 90, 149) 74%, rgb(180, 67, 196) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .Header .container {
   display: flex;
   padding: 2rem;
