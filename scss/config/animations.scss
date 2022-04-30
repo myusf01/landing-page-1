@@ -1,0 +1,21 @@
+@import "variables.scss";
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+        transform: translate3d(0, 30%, 0) scale($default-scale);
+    }
+    100% {
+        transform: translate3d(0, 0, 0) scale($scale-size);
+        opacity: 0;
+    }
+}
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 0, 0) scale($scale-size);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 30%, 0) scale($default-scale);
+    }
+}

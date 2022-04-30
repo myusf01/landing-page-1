@@ -1,0 +1,164 @@
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 30%, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(2);
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 30%, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(2);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(2);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 30%, 0) scale(1);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(2);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 30%, 0) scale(1);
+  }
+}
+.Page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+.Page-second {
+  display: flex;
+  justify-content: space-around;
+  height: 100vh;
+  flex-direction: column;
+}
+.Page-heading {
+  color: #eeeeee;
+  max-width: 500px;
+  font-size: 4rem;
+  padding: 2rem;
+}
+.Page-heading-bold {
+  font-weight: bold;
+  color: #ea1dff;
+}
+.Page-heading-second {
+  color: #eeeeee;
+  margin-right: auto;
+  max-width: 500px;
+  font-size: 4rem;
+  font-weight: bold;
+  padding: 2rem;
+}
+.Page-image {
+  padding: 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.content .showcase {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.content .showcase-image {
+  margin-right: 5rem;
+}
+.content .showcase .details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.content .showcase .details .detail {
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content .showcase .details .detail .title {
+  display: block;
+  font-weight: bold;
+}
+.content .showcase .app-info {
+  display: flex;
+  align-items: center;
+}
+.content .showcase .app-icon {
+  margin-right: 2rem;
+}
+.content .showcase .app-title {
+  display: flex;
+  font-size: 2rem;
+  flex-direction: column;
+}
+.content .showcase .app-title .bold {
+  font-weight: bold;
+}
+.content .showcase .app-store {
+  height: 3rem;
+}
+
+.icon {
+  width: 6rem;
+}
+
+.objects-wrapper {
+  position: absolute;
+}
+
+.Page-floating-1 {
+  position: fixed;
+  pointer-events: none;
+  rotate: 20deg;
+  right: 5rem;
+  bottom: 5rem;
+  top: 7rem;
+}
+
+.Page-floating-2 {
+  position: fixed;
+  pointer-events: none;
+  left: 5rem;
+  bottom: 25rem;
+  top: 1rem;
+}
+
+.frame {
+  display: flex;
+  justify-content: center;
+  height: 320px;
+  width: 320px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.is-visible {
+  -webkit-animation: fade-in 1s ease forwards;
+          animation: fade-in 1s ease forwards;
+}
+
+.is-hidden {
+  -webkit-animation: fade-out 1s ease forwards;
+          animation: fade-out 1s ease forwards;
+}

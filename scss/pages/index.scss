@@ -1,0 +1,117 @@
+@import "../config/animations.scss";
+@import "../config/variables.scss";
+.Page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    &-second {
+        display: flex;
+
+        justify-content: space-around;
+        height: 100vh;
+        flex-direction: column;
+    }
+    &-heading {
+        color: $color-white;
+        max-width: 500px;
+        font-size: $font-size-l;
+        padding: 2rem;
+        &-bold {
+            font-weight: bold;
+            color: $color-purple;
+        }
+
+        &-second {
+            color: $color-white;
+            margin-right: auto;
+
+            max-width: 500px;
+            font-size: $font-size-l;
+            font-weight: bold;
+            padding: 2rem;
+        }
+    }
+
+    &-image {
+        padding: 2rem;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    .showcase {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        &-image {
+            margin-right: 5rem;
+        }
+        .details {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .detail {
+                margin-right: 2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .title {
+                    display: block;
+                    font-weight: bold;
+                }
+            }
+        }
+        .app {
+            &-info {
+                display: flex;
+                align-items: center;
+            }
+            &-icon {
+                margin-right: 2rem;
+            }
+            &-title {
+                display: flex;
+                font-size: $font-size;
+                flex-direction: column;
+                .bold {
+                    font-weight: bold;
+                }
+            }
+            &-store {
+                height: $button-height;
+            }
+        }
+    }
+}
+
+.icon {
+    width: 6rem;
+}
+.objects-wrapper {
+    position: absolute;
+}
+.Page-floating-1 {
+    @include content-object(fixed, 20deg, 5rem, 0, 5rem, 7rem);
+}
+.Page-floating-2 {
+    @include content-object(fixed, 0, 0, 5rem, 25rem, 1rem);
+}
+
+.frame {
+    display: flex;
+    justify-content: center;
+    height: 320px;
+    width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.is-visible {
+    animation: fade-in 1s ease forwards;
+}
+.is-hidden {
+    animation: fade-out 1s ease forwards;
+}

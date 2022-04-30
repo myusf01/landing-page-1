@@ -1,0 +1,12 @@
+@import "../config/variables.scss";
+body {
+    font-family: $font-family;
+    background: url("../assets/background.jpg") no-repeat center center fixed;
+}
+
+.container {
+    max-width: $max-width;
+    max-height: $max-height;
+    margin-left: auto;
+    margin-right: auto;
+}
