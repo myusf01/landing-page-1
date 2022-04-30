@@ -434,7 +434,8 @@ template {
 
 body {
   font-family: "Quicksand", Arial, sans-serif;
-  background: url("../../../assets/background.jpg") no-repeat center center fixed;
+  color: #eeeeee;
+  background-color: #121212;
 }
 
 .container {

@@ -1,14 +1,16 @@
 // variables
 $max-width: 1200px;
 $max-height: 900px;
+$scale-size: 2;
+$default-scale: 1;
 $font-family: "Quicksand", Arial, sans-serif;
 $font-size: 2rem;
 $font-size-m: $font-size * 1.5;
 $font-size-l: $font-size * 2;
 $color-white: #eeeeee;
 $color-purple: #ea1dff;
-$scale-size: 2;
-$default-scale: 1;
+$color-background: #121212;
+
 $button-height: 3rem;
 // functions
 @mixin content-object($position: fixed, $rotate: 0, $right: 0, $left: 0, $bottom: 0, $top: 0) {

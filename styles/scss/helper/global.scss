@@ -1,7 +1,9 @@
 @import "../config/variables.scss";
 body {
     font-family: $font-family;
-    background: url("../../../assets/background.jpg") no-repeat center center fixed;
+    color: $color-white;
+    // background: url("../../../assets/background.jpg") no-repeat center center fixed;
+    background-color: $color-background;
 }
 
 .container {
