@@ -126,6 +126,8 @@
 }
 .content .showcase-carousel {
   width: 360px;
+  display: flex;
+  flex-direction: column;
   margin-right: 5rem;
   margin-top: auto;
   margin-bottom: auto;
@@ -136,6 +138,18 @@
   flex-direction: row;
   height: 100%;
   width: 100%;
+}
+.content .showcase-carousel .dot-slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.content .showcase-carousel .dot-slider .arrow {
+  font-size: 2rem;
+}
+.content .showcase-carousel .dot-slider .activeDot {
+  color: coral;
 }
 .content .showcase .details {
   display: flex;
