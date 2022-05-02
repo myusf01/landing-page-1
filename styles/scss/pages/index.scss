@@ -49,9 +49,22 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        &-image {
+
+        &-carousel {
+            width: 360px;
             margin-right: 5rem;
+            margin-top: auto;
+            margin-bottom: auto;
+            overflow: hidden;
+
+            .carousel-slide {
+                display: flex;
+                flex-direction: row;
+                height: 100%;
+                width: 100%;
+            }
         }
+
         .details {
             display: flex;
             flex-direction: row;

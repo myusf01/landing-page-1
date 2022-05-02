@@ -1,30 +1,4 @@
-// function frameSelect() {
-//   const iframe = [...document.querySelectorAll("iframe")];
-//   let scrollPos = 500;
-//   console.log(iframe);
-//   function checkPosition(frame) {
-//     console.log("check");
-//     let windowY = window.scrollY;
-//     if (windowY <= scrollPos) {
-//       // Scrolling UP
-//       frame.classList.add("is-visible");
-//       frame.classList.remove("is-hidden");
-//     } else {
-//       // Scrolling DOWN
-//       frame.classList.add("is-hidden");
-//       frame.classList.remove("is-visible");
-//     }
-//     scrollPos = windowY;
-//   }
-//   iframe.forEach((frame) => {
-//     frame.addEventListener("scroll", checkPosition(frame));
-//   });
-// }
-
-// document.addEventListener("scroll", frameSelect);
-// // window.onload(frameSelect);
-
-function addClass(objectsArray, name, elementVisible = 500) {
+function addClassOnScroll(objectsArray, name, elementVisible = 500) {
   const objects = Array.from(objectsArray);
 
   for (let i = 0; i < objects.length; i++) {
@@ -40,25 +14,52 @@ function addClass(objectsArray, name, elementVisible = 500) {
   }
 }
 function reveal() {
-  //   const frames = [...document.querySelectorAll("iframe")];
   const background = [document.querySelector(".bg-layer")];
   const frames = [...document.querySelector(".objects-wrapper").children];
-  addClass(frames, "frame");
-  addClass(background, "background", 300);
-  //   console.log(wrapper);
-  // for (let i = 0; i < frames.length; i++) {
-  //   let scrollValue = window.scrollY;
-  //   const elementVisible = 500;
-  //   if (scrollValue < elementVisible) {
-  //     //       frame.classList.add("is-visible");
-  //     frames[i].classList.add("is-visible");
-  //     frames[i].classList.remove("is-hidden");
-  //   } else {
-  //     frames[i].classList.remove("is-visible");
-  //     frames[i].classList.add("is-hidden");
-  //   }
-  // }
+  addClassOnScroll(frames, "frame");
+  addClassOnScroll(background, "background", 300);
+}
+
+function slider() {
+  const showcaseCarousel = document.querySelector(".carousel-slide");
+  const showcaseImages = document.querySelectorAll(".carousel-slide img");
+  const prevButton = document.querySelector("#prevButton");
+  const nextButton = document.querySelector("#nextButton");
+
+  let counter = 1;
+  const imageSize = showcaseImages[0].clientWidth;
+
+  showcaseCarousel.style.transform = `translateX(${-imageSize * counter}px`;
+
+  nextButton.addEventListener("click", function () {
+    if (counter >= showcaseImages.length - 1) return;
+
+    showcaseCarousel.style.transition = "transform 0.4s ease-in-out";
+    counter++;
+    showcaseCarousel.style.transform = `translateX(${-imageSize * counter}px`;
+  });
+
+  prevButton.addEventListener("click", function () {
+    if (counter <= 0) return;
+    showcaseCarousel.style.transition = "transform 0.4s ease-in-out";
+    counter--;
+    showcaseCarousel.style.transform = `translateX(${-imageSize * counter}px`;
+  });
+
+  showcaseCarousel.addEventListener("transitionend", function () {
+    if (showcaseImages[counter].id === "lastClone") {
+      showcaseCarousel.style.transition = "none";
+      counter = showcaseImages.length - 2;
+      showcaseCarousel.style.transform = `translateX(${-imageSize * counter}px`;
+    }
+    if (showcaseImages[counter].id === "firstClone") {
+      showcaseCarousel.style.transition = "none";
+      counter = showcaseImages.length - counter;
+      showcaseCarousel.style.transform = `translateX(${-imageSize * counter}px`;
+    }
+  });
 }
 
 window.addEventListener("scroll", reveal);
 reveal();
+slider();

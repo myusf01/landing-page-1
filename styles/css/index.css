@@ -632,8 +632,18 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-.content .showcase-image {
+.content .showcase-carousel {
+  width: 360px;
   margin-right: 5rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  overflow: hidden;
+}
+.content .showcase-carousel .carousel-slide {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
 }
 .content .showcase .details {
   display: flex;
