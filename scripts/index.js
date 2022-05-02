@@ -51,8 +51,6 @@ function slider() {
 
   // next button
   nextButton.addEventListener("click", function () {
-    console.log(imageSize);
-
     if (counter >= showcaseImages.length - 1) return;
     if (counter < dotIcons.length) {
       // add class to current dot and remove previous one
@@ -66,7 +64,6 @@ function slider() {
   prevButton.addEventListener("click", function () {
     if (counter <= 0) return;
     if (counter < dotIcons.length) {
-      console.log(counter);
       // add class to current dot and remove previous one
       toggleClassName(dotIcons, "activeDot", counter - 1, counter);
     }
@@ -92,9 +89,6 @@ function slider() {
 
       // add class to first dot and remove from latest dot
       toggleClassName(dotIcons, "activeDot", counter - 1, dotIcons.length - 1);
-      console.log("first");
-      // dotIcons[counter - 1].classList.add("activeDot");
-      // dotIcons[dotIcons.length - 1].classList.remove("activeDot");
     }
   });
 }

@@ -1,6 +1,7 @@
 @import "../config/animations.scss";
 @import "../config/variables.scss";
 @import "../config/mixin.scss";
+
 .Page {
     display: flex;
     justify-content: space-between;
@@ -49,21 +50,23 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
         &-carousel {
-            width: 360px;
+            width: 340px;
             display: flex;
             flex-direction: column;
             margin-right: 5rem;
-            margin-top: auto;
-            margin-bottom: auto;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
             overflow: hidden;
 
             .carousel-slide {
                 display: flex;
                 flex-direction: row;
-                height: 100%;
                 width: 100%;
+                height: 500px;
+                img {
+                    padding: 0.5rem;
+                }
             }
 
             .dot-slider {
@@ -71,11 +74,20 @@
                 flex-direction: row;
                 justify-content: space-around;
                 align-items: center;
+                .dots {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
                 .arrow {
                     font-size: $font-size;
+                    cursor: pointer;
                 }
                 .activeDot {
                     color: coral;
+                    transform: scale(2);
+                    transition: transform 0.1s ease-in-out;
                 }
             }
         }
